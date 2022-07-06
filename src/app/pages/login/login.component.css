@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+.ring {
+  border: 2px solid #2f78ed;
+  padding: 2px;
+}
+.loginBody {
+  border: 1px solid #2f78ed;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
