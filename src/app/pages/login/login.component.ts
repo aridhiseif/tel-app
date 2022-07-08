@@ -48,18 +48,5 @@ export class LoginComponent implements OnInit {
           }
         });
     }
-
-    /*  await this.apiService.login(this.loginForm.value).subscribe((val) => {
-      if (val == []) {
-        location.replace('/login');
-      } else {
-        console.log(val[0]);
-        localStorage.setItem('firstname', val[0].firstname);
-        localStorage.setItem('lastname', val[0].lastname);
-        localStorage.setItem('email', val[0].email);
-        localStorage.setItem('idAdmin', val[0]._id);
-        location.replace('/');
-      }
-    }); */
   }
 }
