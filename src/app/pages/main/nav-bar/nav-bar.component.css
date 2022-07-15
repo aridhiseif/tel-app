@@ -1,0 +1,7 @@
+.NavBarContainer {
+  display: flex;
+  height: 100%;
+  border: 1px solid blue;
+  background-color: #154cf2;
+  color: white;
+}

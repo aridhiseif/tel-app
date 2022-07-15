@@ -1,1 +1,5 @@
-<p>main works!</p>
+<app-header (navBarState)="changeState()"></app-header>
+<div class="main">
+  <app-nav-bar *ngIf="navstate"></app-nav-bar>
+  <p>main works!</p>
+</div>

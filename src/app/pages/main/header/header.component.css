@@ -1,0 +1,49 @@
+.header-container {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgb(21, 76, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(21, 76, 242, 1) 0%,
+    rgba(108, 72, 199, 1) 100%
+  );
+  color: white;
+}
+
+.center-div {
+  border: 2px solid white;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  text-shadow: 0 0 5px rgba(245, 242, 242, 1);
+}
+
+.logout {
+  border: 2px solid white;
+  background: none;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+}
+
+.logout:hover {
+  background-color: white;
+  color: blue;
+  transition: 0.25s;
+}
+
+.logout:active {
+  background-color: #949494;
+  transition: 0.25s;
+}
+
+.menuBtn {
+  background-color: transparent;
+  padding: 3px;
+}
