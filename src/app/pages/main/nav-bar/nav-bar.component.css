@@ -1,7 +1,32 @@
 .NavBarContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
+  width: 120px;
   border: 1px solid blue;
   background-color: #154cf2;
   color: white;
+}
+
+.navBtn {
+  border: 2px solid white;
+  background: none;
+  color: white;
+  margin-top: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.navBtn:hover {
+  background-color: white;
+  color: blue;
+  transition: 0.25s;
+}
+
+.navBtn:active {
+  background-color: #949494;
+  transition: 0.25s;
 }
