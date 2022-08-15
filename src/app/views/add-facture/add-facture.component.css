@@ -1,0 +1,41 @@
+table {
+  margin-left: 3px;
+}
+
+td {
+  padding-left: 5px;
+}
+
+.factContainer {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+.BtnDiv {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 3px;
+}
+
+.submitBtn {
+  border: 2px solid #17389c;
+  background: none;
+  color: #17389c;
+  margin-top: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  width: 80px;
+}
+
+.submitBtn:hover {
+  background-color: #17389c;
+  color: white;
+  transition: 0.25s;
+}
+
+.submitBtn:active {
+  background-color: #949494;
+  transition: 0.25s;
+}

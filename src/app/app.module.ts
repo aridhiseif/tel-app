@@ -10,9 +10,11 @@ import { HeaderComponent } from './pages/main/header/header.component';
 import { NavBarComponent } from './pages/main/nav-bar/nav-bar.component';
 import { AddFactureComponent } from './views/add-facture/add-facture.component';
 import { FooterComponent } from './pages/main/footer/footer.component';
+import { ArchiveComponent } from './views/archive/archive.component';
+import { ArchiveRecordComponent } from './views/archive-record/archive-record.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, MainComponent, HeaderComponent, NavBarComponent, AddFactureComponent, FooterComponent],
+  declarations: [AppComponent, LoginComponent, MainComponent, HeaderComponent, NavBarComponent, AddFactureComponent, FooterComponent, ArchiveComponent, ArchiveRecordComponent],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

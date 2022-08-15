@@ -5,6 +5,7 @@ import { MainComponent } from './pages/main/main.component';
 import { AuthGuard } from './utils/guards/auth.guard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddFactureComponent } from './views/add-facture/add-facture.component';
+import { ArchiveComponent } from './views/archive/archive.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: 'addfacture',
         component: AddFactureComponent,
+      },
+      {
+        path: 'archive',
+        component: ArchiveComponent,
       },
     ],
   },
