@@ -12,10 +12,11 @@ import { AddFactureComponent } from './views/add-facture/add-facture.component';
 import { FooterComponent } from './pages/main/footer/footer.component';
 import { ArchiveComponent } from './views/archive/archive.component';
 import { ArchiveRecordComponent } from './views/archive-record/archive-record.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, MainComponent, HeaderComponent, NavBarComponent, AddFactureComponent, FooterComponent, ArchiveComponent, ArchiveRecordComponent],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

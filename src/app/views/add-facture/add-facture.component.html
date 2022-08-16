@@ -1,32 +1,37 @@
 facture works!
 <div>
-  <form action="#">
+  <form>
     <div class="factContainer">
       <table>
         <tr>
           <td>Nom et Prénom:</td>
-          <td><input type="string" /></td>
+          <td><input #textbox type="string" /></td>
         </tr>
         <tr>
           <td>Telephone:</td>
-          <td><input type="string" /></td>
+          <td><input #textbox2 type="string" /></td>
         </tr>
         <tr>
           <td>Date début période:</td>
-          <td><input type="date" /></td>
+          <td><input #textbox3 type="date" /></td>
         </tr>
         <tr>
           <td>Date fin période:</td>
-          <td><input type="date" /></td>
+          <td><input #textbox4 type="date" /></td>
         </tr>
         <tr>
           <td>Montant:</td>
-          <td><input type="number" /></td>
+          <td><input #textbox5 type="number" /></td>
         </tr>
         <tr></tr>
       </table>
       <div class="BtnDiv">
-        <input type="submit" value="ajouter" class="submitBtn" />
+        <button
+          class="submitBtn"
+          (click)="submitForm(textbox.value,textbox2.value,textbox3.value,textbox4.value,textbox5.value)"
+        >
+          ajouter
+        </button>
       </div>
     </div>
   </form>
