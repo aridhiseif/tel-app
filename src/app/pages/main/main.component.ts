@@ -11,7 +11,6 @@ export class MainComponent implements OnInit {
 
   changeState() {
     this.navstate = !this.navstate;
-    console.log(`nav state = ${this.navstate}`);
   }
 
   ngOnInit(): void {}

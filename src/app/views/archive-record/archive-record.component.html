@@ -1,1 +1,70 @@
-<p>archive-record works!</p>
+<div *ngIf="status == true" class="factureMain">
+  <table style="width: 500px">
+    <tr>
+      <th colspan="2">TOPNET</th>
+    </tr>
+    <tr>
+      <td class="firstTd">Nom et Prénom:</td>
+      <td>{{ factureObj.fullName }}</td>
+    </tr>
+    <tr>
+      <td>Téléphone ADSL:</td>
+      <td>{{ factureObj.tel }}</td>
+    </tr>
+    <tr>
+      <td>Facture:</td>
+      <td>{{ factureObj.facture }}</td>
+    </tr>
+    <tr>
+      <td>date début période:</td>
+      <td>{{ factureObj.dates | date: "dd/MM/yyyy" }}</td>
+    </tr>
+    <tr>
+      <td>date fin période:</td>
+      <td>{{ factureObj.datef | date: "dd/MM/yyyy" }}</td>
+    </tr>
+    <tr>
+      <td>montant:</td>
+      <td>{{ factureObj.montant }}</td>
+    </tr>
+  </table>
+  <div style="display: flex; justify-content: center">
+    <button class="archRecordBtn" (click)="deleteRecored()">Supprimer</button>
+    <button (click)="changeStatus()" class="archRecordBtn">modifier</button>
+  </div>
+</div>
+
+<!--interface de modification  -->
+
+<div *ngIf="status == false" class="factureMain">
+  <table style="width: 500px">
+    <tr>
+      <th colspan="2">TOPNET</th>
+    </tr>
+    <tr>
+      <td class="firstTd">Nom et Prénom:</td>
+      <td><input type="text" [value]="factureObj.fullName" /></td>
+    </tr>
+    <tr>
+      <td>Téléphone ADSL:</td>
+      <td><input type="text" [value]="factureObj.tel" /></td>
+    </tr>
+
+    <tr>
+      <td>date début période:</td>
+      <td><input type="date" [value]="factureObj.dates" /></td>
+    </tr>
+    <tr>
+      <td>date fin période:</td>
+      <td><input type="date" [value]="factureObj.datef" /></td>
+    </tr>
+    <tr>
+      <td>montant:</td>
+      <td><input type="number" [value]="factureObj.montant" /></td>
+    </tr>
+  </table>
+  <div style="display: flex; justify-content: center">
+    <button class="archRecordBtn">Save</button>
+    <button (click)="changeStatus()" class="archRecordBtn">restore</button>
+  </div>
+</div>

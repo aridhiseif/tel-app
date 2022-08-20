@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
   navbarbtn() {
     this.navBarState.emit(!this.bool);
     this.bool = !this.bool;
-    console.log(`navBarState = ${this.bool} `);
   }
 
   constructor() {}
