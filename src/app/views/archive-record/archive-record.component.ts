@@ -18,18 +18,50 @@ export class ArchiveRecordComponent implements OnInit {
 
   constructor(private http: HttpClient, public router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const datef = Date.parse(this.factureObj.datef);
+    console.log('datef =', datef);
+    console.log('date now =', Date.now());
+  }
 
   changeStatus() {
     this.status = !this.status;
   }
 
+  getClass() {
+    const datef = Date.parse(this.factureObj.datef);
+    return {
+      factureMain: datef > Date.now(),
+      factureMainRed: datef < Date.now(),
+    };
+  }
+
   deleteRecored() {
     this.http
       .delete('http://127.0.0.1:3000/factures/' + this.factureObj._id)
-      .subscribe(() => console.log('facture deleted'));
-    this.router.navigate(['/addfacture']).then(() => window.location.reload());
+      .subscribe(() => {
+        alert("'facture deleted'");
+        this.router.navigate(['/archive']).then(() => window.location.reload());
+      });
   }
 
-  updateRecord() {}
+  updateRecord(fullName: any, tel: any, montant: any) {
+    let body = {
+      fullName: fullName,
+      tel: tel,
+      montant: montant,
+    };
+
+    console.log(body);
+    this.http
+      .put(
+        'http://127.0.0.1:3000/factures/' + this.factureObj._id,
+        body,
+        this.httpOptions
+      )
+      .subscribe((res) => {
+        console.log(res);
+        this.router.navigate(['/archive']).then(() => window.location.reload());
+      });
+  }
 }

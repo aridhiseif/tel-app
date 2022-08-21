@@ -1,4 +1,4 @@
-<div *ngIf="status == true" class="factureMain">
+<div *ngIf="status == true" [ngClass]="getClass()">
   <table style="width: 500px">
     <tr>
       <th colspan="2">TOPNET</th>
@@ -43,28 +43,25 @@
     </tr>
     <tr>
       <td class="firstTd">Nom et Prénom:</td>
-      <td><input type="text" [value]="factureObj.fullName" /></td>
+      <td><input #fullName type="text" [value]="factureObj.fullName" /></td>
     </tr>
     <tr>
       <td>Téléphone ADSL:</td>
-      <td><input type="text" [value]="factureObj.tel" /></td>
+      <td><input #tel type="text" [value]="factureObj.tel" /></td>
     </tr>
 
     <tr>
-      <td>date début période:</td>
-      <td><input type="date" [value]="factureObj.dates" /></td>
-    </tr>
-    <tr>
-      <td>date fin période:</td>
-      <td><input type="date" [value]="factureObj.datef" /></td>
-    </tr>
-    <tr>
       <td>montant:</td>
-      <td><input type="number" [value]="factureObj.montant" /></td>
+      <td><input #montant type="number" [value]="factureObj.montant" /></td>
     </tr>
   </table>
   <div style="display: flex; justify-content: center">
-    <button class="archRecordBtn">Save</button>
+    <button
+      (click)="updateRecord(fullName.value, tel.value, montant.value)"
+      class="archRecordBtn"
+    >
+      Save
+    </button>
     <button (click)="changeStatus()" class="archRecordBtn">restore</button>
   </div>
 </div>
