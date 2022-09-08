@@ -1,6 +1,10 @@
 <div class="container">
   <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div class="SgininBox">
+      <div>
+          <div style="display: flex;justify-content: center; color: #3561db;" >
+              <h2>Tunisie Telecom</h2>
+          </div>    
+      <div class="SgininBox">
       Email:
       <input formControlName="email" type="email" class="Input" name="email" />
       Password:
@@ -24,5 +28,6 @@
         <button class="btnSave">LOGIN</button>
       </div>
     </div>
+      </div>
   </form>
 </div>
